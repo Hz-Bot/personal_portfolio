@@ -110,11 +110,10 @@ body {
     background-color: #3498db;
     color: white;
     padding: 15px 30px;
-    text-decoration: none; 
+    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    min-width: 200px;
 }
 
 .portfolio-button:hover {
@@ -142,23 +141,108 @@ body {
     line-height: 1.8;
 }
 
-/* Responsive design for mobile */
+/* IMPROVED MOBILE RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    /* Make columns stack vertically on mobile */
     .triple-column {
         flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
     }
     
+    /* Make each column full width and more readable */
+    .column {
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    
+    .column h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .column p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    /* Stack contact info vertically */
     .contact ul {
         flex-direction: column;
         gap: 15px;
     }
     
+    .contact li {
+        font-size: 0.9rem;
+    }
+    
+    /* Stack buttons vertically */
     .button-container {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+    }
+    
+    .portfolio-button {
+        width: 200px;
+        text-align: center;
+    }
+    
+    /* Adjust header for mobile */
+    .header {
+        padding: 20px 15px;
     }
     
     .header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    /* Adjust title section */
+    .title-section {
+        padding: 12px 15px;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    /* Adjust personal section */
+    .personal-section {
+        padding: 30px 15px;
+    }
+    
+    .personal-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .personal-section p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .column {
+        padding: 15px;
+    }
+    
+    .column h2 {
+        font-size: 1.2rem;
+    }
+    
+    .column p {
+        font-size: 0.85rem;
+    }
+    
+    .triple-column {
+        padding: 15px 10px;
     }
 }
